@@ -106,7 +106,7 @@ func (r Running) Calories() float64 {
 	meanSpeed := r.Training.meanSpeed()
 	weight := r.Training.Weight
 	duration := r.Training.Duration
-	return ((18*meanSpeed + CaloriesMeanSpeedMultiplier) * weight / MInKm * duration.hours(duration) * MinInHours)
+	return ((18*meanSpeed + CaloriesMeanSpeedMultiplier) * weight / MInKm * float64(duration) * MinInHours)
 }
 
 // TrainingInfo возвращает структуру InfoMessage с информацией о проведенной тренировке.
@@ -244,3 +244,4 @@ func main() {
 	fmt.Println(ReadData(running))
 
 }
+
