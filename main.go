@@ -61,7 +61,7 @@ func (t Training) TrainingInfo() InfoMessage {
 		TrainingType: t.TrainingType,
 		Duration:     t.Duration,
 		Distance:     t.distance(),
-		Speed:    t.MeanSpeed(),
+		Speed:    t.meanSpeed(),
 		Calories:     t.Calories(),
 	}
 	return inf
